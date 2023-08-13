@@ -9,14 +9,15 @@ Keywords: DDoS attacks; machine learning; Honeypot; Mininet
 本文首先阐述了DDoS攻击的分类、常见防御方法，蜜罐的分类和防御过程。其次提出了基于机器学习的DDoS攻击实时检测方法，在对CIC-IDS2017的PACP数据集进行预处理后，使用随机森林提取特征，完成四种分类器的训练和测试，比较了支持向量机（Support Vector Machine, SVM）模型、K最近邻（K-nearest neighbors, KNN）模型、决策树模型和Logistic回归模型的准确率、精确率、召回率和综合评价指标，实验结果表明，小样本数据下Logistic回归模型的准确率和综合评价指标均为最高。最后提出了基于蜜罐技术的DDoS攻击主动防御方法，在Mininet模拟的网络环境中，部署Logistic回归模型和蜜罐系统，使用Ryu Controller记录网络流特征，通过Logistic回归模型检测攻击流并转发至蜜罐，进而由蜜罐记录攻击信息，实验结果表明，该方法实现了基于蜜罐技术的实时检测和防御DDoS攻击的目的。
 本文采用模拟环境生成网络流量，通过分析模型的检测结果和蜜罐的记录信息，证明了该方法的有效性。在模拟环境下Logistic回归模型的准确度为99.33%，检测单个攻击的时间为0.068秒，实验结果表明，利用机器学习和蜜罐技术在模拟环境下能够有效检测并防御DDoS攻击。
 
-In Mininet server:
-
+### In Mininet server:
+https://console.cloud.tencent.com/lighthouse/image/detail?rid=1&id=lhbp-a7x7ygjl
 ``` shell
 # Implement the Topo
 /bin/bash topo.py
 ```
 
 ### In Ryu Controller server:
+https://drive.google.com/file/d/1mj9u675tgisSiUFOXSPTI1JqHPvgF3W1/view?usp=drive_link
 ```shell
 # Start the normal stream
 /bin/bash ./flow_simulate/normal_flow/bak_flow.sh
