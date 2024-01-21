@@ -4,7 +4,9 @@ Network information security has become an issue that cannot be ignored, and Dis
 This paper firstly describes the classification of DDoS attacks and common defense methods, followed by the classification and defense process of honeypots. After preprocessing the PACP dataset of CIC-IDS2017, we use random forest to extract features, complete the training and testing of four classifiers, compare the support vector machine (SVM) model, K-nearest neighbors (KNN) model, decision tree model and The accuracy, precision, recall, and overall evaluation metrics of the Logistic Regression model were compared, and the accuracy and overall evaluation metrics of the Logistic Regression model were the highest with this small sample data. The logistic regression model is deployed in the network environment simulated by Mininet, and the honeypot system is deployed to record the network flow characteristics using Ryu Controller, and the attack flow detected by the logistic regression model is forwarded to the honeypot, which records the attack information to achieve the purpose of detecting and real-time defense against DDoS attacks using honeypot technology.
 
 In this paper, a simulated environment is used to generate network traffic, and the effectiveness of the method is proved by analyzing the detection results of the model and the recording information of the honeypot. The accuracy of the logistic regression model selected in this environment is 99.33%, and the time to detect a single attack is 0.068 seconds. The experimental results show that DDoS attacks can be effectively detected and defended under the simulated environment using machine learning and honeypot technology.
-Keywords: DDoS attacks; machine learning; Honeypot; Mininet
+
+## Keywords: 
+DDoS attacks; machine learning; Honeypot; Mininet
 
 
 网络信息安全已经成为一个不容忽视的问题，分布式拒绝服务（Distributed Denial of Service, DDoS）攻击日益成为威胁网络安全的重大威胁。由于DDoS攻击使用标准的协议和服务进行入侵，传统的方法很难检测和防御。蜜罐技术的主动防御技术可以有效检测和防御DDoS攻击，但是面临着反蜜罐技术对抗检测，因此本文提出了使用机器学习方法实时检测，并将DDoS攻击流转发至蜜罐的模型，以有效检测DDoS攻击，提升DDoS攻击防御能力。
